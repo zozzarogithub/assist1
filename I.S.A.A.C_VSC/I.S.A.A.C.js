@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(300, 300);
   mic = new p5.AudioIn();
   mic.start();
   fft = new p5.FFT();
@@ -35,7 +35,7 @@ function draw() {
     let level = mic.getLevel();
     
     // Image size (adjust if you want a different fit)
-    let imgSize = 150; 
+    let imgSize = 80; 
   
     // Display either img1 or img2 based on sound level, centered in the ring
     if (level > soundThreshold) {
@@ -49,9 +49,9 @@ function draw() {
     for (let i = 0; i < numPills; i++) {
       let angle = map(i, 0, numPills, 0, TWO_PI);
       let amplitude = spectrum[i * 2];
-      let r = 221;
-      let pillWidth = map(amplitude, 0, 255, 10, 80);
-      let pillHeight = 10;
+      let r = 125;
+      let pillWidth = map(amplitude, 0, 255, 5, 40);
+      let pillHeight = 6;
       let x = r * cos(angle);
       let y = r * sin(angle);
       

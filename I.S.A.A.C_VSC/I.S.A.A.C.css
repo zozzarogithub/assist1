@@ -8,7 +8,8 @@
   }
   
   canvas {
-    padding-left: 10px;
+    padding-left: 15px;
+    padding-top: 27px;
     background: transparent;
     z-index: 9; /* Or whatever makes it sit on top */
     position: absolute; /* Required for z-index to take effect */
@@ -17,8 +18,8 @@
   .label {
     position: absolute;
     z-index: 5;
-    padding-top: 185px;
-    padding-left: 210px;
+    padding-top: 105px;
+    padding-left: 103px;
   }
   
   .interface {
